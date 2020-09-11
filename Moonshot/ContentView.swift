@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(missions) { mission in
-                NavigationLink(destination: Text("\(mission.description)")) {
+                NavigationLink(destination: MissionView(mission: mission, astronauts: astronauts)) {
                     HStack {
                         Image(mission.image)
                             .resizable()
